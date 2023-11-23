@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 public class AuctionController {
     @PostMapping("/bid")
     public String PostTest(@RequestBody String msg){
+        System.out.println("msg = "+ msg);
         return"post success"+msg;
     }
 }
