@@ -16,9 +16,12 @@ public class RedisConfiguration {
     @Value("${spring.data.redis.port}")
     private int redisPort;
 
+    //TCP통신
     @Bean
     public RedisConnectionFactory redisConnectionFactory() {
-        return new LettuceConnectionFactory(redisHost, redisPort);
+        return new LettuceConnectionFactory(
+                new RedisStandaloneConfiguration(redisHost, redisPort)
+        );
     }
 
     @Bean
