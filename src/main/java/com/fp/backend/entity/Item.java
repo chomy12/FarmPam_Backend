@@ -42,5 +42,4 @@ public class Item {
     @Column
     private boolean isSoldout;
 
-
 }
