@@ -19,6 +19,8 @@ public class ItemService {
 
     private final ItemRepository itemRepository;
     private final ItemImgService itemImgService;
+    private final ItemTagMapService itemTagMapService;
+
 
     public Long saveItem(ItemFormDto itemFormDto,
                          List<MultipartFile> itemImgFileList) throws Exception{
@@ -37,6 +39,10 @@ public class ItemService {
                 itemImg.setRepImgYn("N");
             itemImgService.saveItemImg(itemImg, itemImgFileList.get(i));
         }
+
+        // 태그 등록
+        itemTagMapService.saveItemTag(item, itemFormDto.getTagNames());
+
         return item.getId();
     }
 
