@@ -30,16 +30,16 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-    implementation 'org.springframework.boot:spring-boot-starter-websocket'
+//    implementation 'org.springframework.boot:spring-boot-starter-websocket'
     //Redis
-    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+//    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
 
     //DynamoDB
-    implementation 'com.amazonaws:aws-java-sdk-dynamodb:1.12.529'
-    implementation 'com.github.derjust:spring-data-dynamodb:5.1.0'
+//    implementation 'com.amazonaws:aws-java-sdk-dynamodb:1.12.529'
+//    implementation 'com.github.derjust:spring-data-dynamodb:5.1.0'
 
     //FCM
-    implementation 'com.google.firebase:firebase-admin:9.2.0'
+//    implementation 'com.google.firebase:firebase-admin:9.2.0'
 
     // ryugahee
     implementation 'org.modelmapper:modelmapper:2.4.2'

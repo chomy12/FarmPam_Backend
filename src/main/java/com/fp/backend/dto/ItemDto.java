@@ -18,15 +18,10 @@ public class ItemDto {
 
     private int time;
 
-    private String itemTag;
-
     private String itemType;
 
     private int weight;
 
     private boolean isSoldout;
 
-    private LocalDateTime regTime;
-
-    private LocalDateTime updateTime;
 }

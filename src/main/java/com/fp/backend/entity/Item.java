@@ -5,12 +5,17 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 @Getter
 @Setter
 @ToString
 @Table(name="item")
 @Entity
-public class Item {
+public class Item extends BaseEntity{
 
     @Column(name="item_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -30,9 +35,6 @@ public class Item {
     @Column(nullable = false)
     private int time;
 
-    @Column(nullable = false, length = 50)
-    private String itemTag;
-
     @Column(nullable = false)
     private String itemType;
 
@@ -41,5 +43,6 @@ public class Item {
 
     @Column
     private boolean isSoldout;
+
 
 }

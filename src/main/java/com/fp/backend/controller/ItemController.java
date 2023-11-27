@@ -27,7 +27,6 @@ public class ItemController {
     @PostMapping("/item/new")
     public ResponseEntity<String> itemNew(@Valid ItemFormDto itemFormDto,
                           @RequestParam("files") List<MultipartFile> itemImgFileList) {
-        System.out.println("들어옵니까아");
 
         if (itemImgFileList.get(0).isEmpty() && itemFormDto.getId() == null) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("첫번째 상품 이미지는 필수 입력 값입니다.");

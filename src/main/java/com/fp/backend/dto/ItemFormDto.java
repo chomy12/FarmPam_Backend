@@ -22,8 +22,6 @@ public class ItemFormDto {
 
     private int time;
 
-    private String itemTag;
-
     private String itemType;
 
     private int weight;
@@ -35,6 +33,9 @@ public class ItemFormDto {
 
     // 상품 이미지 아이디를 저장 (상품 수정시 이미지 저장)
     private List<Long> itemImgIds = new ArrayList<>();
+
+    // 태그 저장
+    private List<String> tagNames;
 
     private static ModelMapper modelMapper = new ModelMapper();
 
