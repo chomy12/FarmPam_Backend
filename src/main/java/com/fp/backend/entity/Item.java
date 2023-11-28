@@ -40,5 +40,4 @@ public class Item extends BaseEntity{
     @Column
     private boolean isSoldout;
 
-
 }
