@@ -3,7 +3,6 @@ package com.fp.backend.controller;
 import com.fp.backend.entity.Auction;
 import com.fp.backend.service.AuctionService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -14,14 +13,11 @@ public class AuctionController {
 
     private final AuctionService auctionService;
 
-//    @PostMapping("/bid")
-//    public String PostTest(@RequestBody String msg){
-//        System.out.println("msg = "+ msg);
-//        return"post success"+msg;
-//    }
-
     @PostMapping("/bid")
     public Auction saveAuction(@RequestBody Auction auction){
+        System.out.println("data.id = " + auction.getId());
+        System.out.println("data.userName = " + auction.getUserName());
+        System.out.println("data.bidPrice = " + auction.getBidPrice());
         return auctionService.saveAuction(auction);
     }
     @GetMapping("/bid/{id}")

@@ -3,7 +3,6 @@ package com.fp.backend.service;
 import com.fp.backend.entity.Auction;
 import com.fp.backend.repository.AuctionRepo;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
